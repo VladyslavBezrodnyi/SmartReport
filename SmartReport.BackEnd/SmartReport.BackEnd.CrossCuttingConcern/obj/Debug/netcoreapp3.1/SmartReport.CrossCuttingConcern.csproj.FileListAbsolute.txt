@@ -1,0 +1,4 @@
+R:\SmartReport\SmartReport.BackEnd\SmartReport.CrossCuttingConcern\obj\Debug\netcoreapp3.1\SmartReport.CrossCuttingConcern.csprojAssemblyReference.cache
+R:\SmartReport\SmartReport.BackEnd\SmartReport.CrossCuttingConcern\obj\Debug\netcoreapp3.1\SmartReport.CrossCuttingConcern.AssemblyInfoInputs.cache
+R:\SmartReport\SmartReport.BackEnd\SmartReport.CrossCuttingConcern\obj\Debug\netcoreapp3.1\SmartReport.CrossCuttingConcern.AssemblyInfo.cs
+R:\SmartReport\SmartReport.BackEnd\SmartReport.CrossCuttingConcern\obj\Debug\netcoreapp3.1\SmartReport.CrossCuttingConcern.csproj.CoreCompileInputs.cache

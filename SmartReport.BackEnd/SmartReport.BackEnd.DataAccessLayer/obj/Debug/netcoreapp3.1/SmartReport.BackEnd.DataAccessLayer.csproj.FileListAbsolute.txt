@@ -1,0 +1,15 @@
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.csprojAssemblyReference.cache
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.AssemblyInfoInputs.cache
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.AssemblyInfo.cs
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.csproj.CoreCompileInputs.cache
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.deps.json
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.runtimeconfig.json
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.runtimeconfig.dev.json
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.csproj.CopyComplete
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.genruntimeconfig.cache

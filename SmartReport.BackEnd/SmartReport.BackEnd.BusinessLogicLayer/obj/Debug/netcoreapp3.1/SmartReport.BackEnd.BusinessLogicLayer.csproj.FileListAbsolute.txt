@@ -1,0 +1,17 @@
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.csprojAssemblyReference.cache
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.AssemblyInfoInputs.cache
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.AssemblyInfo.cs
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.deps.json
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.runtimeconfig.json
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.runtimeconfig.dev.json
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.DataAccessLayer.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.csproj.CopyComplete
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.dll
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.pdb
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.genruntimeconfig.cache
+R:\SmartReport\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.BusinessLogicLayer.csproj.CoreCompileInputs.cache

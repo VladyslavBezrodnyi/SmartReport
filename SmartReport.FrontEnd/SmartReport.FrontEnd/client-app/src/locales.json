@@ -1,0 +1,14 @@
+{
+    "en": {
+        "header.home": "Home",
+        "header.login": "LogIn",
+        "header.logout": "LogOut",
+        "home.hello": "Hello!"
+    },
+    "ukr": {
+        "header.home": "Головна",
+        "header.login": "Увійти",
+        "header.logout": "Вийти",
+        "home.hello": "Привіт!"
+    }
+}

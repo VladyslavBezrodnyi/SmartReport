@@ -1,0 +1,4 @@
+R:\SmartReport\SmartReport.BackEnd\SmartReport.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BusinessLogicLayer.csprojAssemblyReference.cache
+R:\SmartReport\SmartReport.BackEnd\SmartReport.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BusinessLogicLayer.AssemblyInfoInputs.cache
+R:\SmartReport\SmartReport.BackEnd\SmartReport.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BusinessLogicLayer.AssemblyInfo.cs
+R:\SmartReport\SmartReport.BackEnd\SmartReport.BusinessLogicLayer\obj\Debug\netcoreapp3.1\SmartReport.BusinessLogicLayer.csproj.CoreCompileInputs.cache

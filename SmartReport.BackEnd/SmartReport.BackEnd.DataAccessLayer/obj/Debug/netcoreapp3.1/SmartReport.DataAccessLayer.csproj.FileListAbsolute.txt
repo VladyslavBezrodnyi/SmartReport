@@ -1,0 +1,8 @@
+R:\SmartReport\SmartReport\SmartReport.DataAccessLayer\bin\Debug\netcoreapp3.1\SmartReport.CrossCuttingConcern.dll
+R:\SmartReport\SmartReport\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.csprojAssemblyReference.cache
+R:\SmartReport\SmartReport\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.AssemblyInfoInputs.cache
+R:\SmartReport\SmartReport\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.AssemblyInfo.cs
+R:\SmartReport\SmartReport.BackEnd\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.csprojAssemblyReference.cache
+R:\SmartReport\SmartReport.BackEnd\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.AssemblyInfoInputs.cache
+R:\SmartReport\SmartReport.BackEnd\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.AssemblyInfo.cs
+R:\SmartReport\SmartReport.BackEnd\SmartReport.DataAccessLayer\obj\Debug\netcoreapp3.1\SmartReport.DataAccessLayer.csproj.CoreCompileInputs.cache
