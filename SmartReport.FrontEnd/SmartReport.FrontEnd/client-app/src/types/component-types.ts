@@ -1,4 +1,4 @@
-import { LoginDTO } from './account-types';
+import { LoginDTO, RegistrationDTO } from './account-types';
 import { AppUser } from "./common-types";
 
 export interface HeaderProps {
@@ -8,7 +8,6 @@ export interface HeaderProps {
   }
   login(loginDTO: LoginDTO): void;
   logout(): void;
-  registr(): void;
 }
 
 export interface HomeProps {
@@ -24,4 +23,8 @@ export interface SwitcherProps {
   currentLocale: string,
   locales: any,
   loadLocales(loale: string):void
+}
+
+export interface AccountCreationProps {
+  register(registerDTO: RegistrationDTO):void
 }

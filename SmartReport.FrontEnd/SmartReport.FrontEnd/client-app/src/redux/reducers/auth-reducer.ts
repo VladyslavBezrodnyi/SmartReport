@@ -6,21 +6,16 @@ import {
     LOGOUT_SUCCESS
   } from '../../constants/auth-constants';
 import { AppUser } from '../../types/common-types';
+import tokenService from '../../services/token-service';
 
 const initialState: AuthState = {
   isAuthenticated: false,
-  user: {
-    access_token: localStorage.getItem('access_token')
-  } as AppUser
+  user: null
 };
 
 const authReducer = (state: AuthState = initialState, action: Action): AuthState => {
     switch (action.type) {
     case LOGIN_SUCCESS:
-      const token = action.payload.user.access_token;
-      if (token) {
-        localStorage.setItem('access_token', token as string);
-      }
       return {
         ...state,
         user: {
@@ -33,7 +28,6 @@ const authReducer = (state: AuthState = initialState, action: Action): AuthState
         ...state,
       };
     case LOGOUT_SUCCESS:
-      localStorage.removeItem('access_token');
       return {
         ...state,
         user: null,
@@ -41,11 +35,8 @@ const authReducer = (state: AuthState = initialState, action: Action): AuthState
       };
     default:
       const access_token = localStorage.getItem('access_token');
-      const isAuth = (access_token) ? (true) : (false);
-      let user = null;
-      if(isAuth){
-        user = {access_token} as AppUser
-      }
+      let isAuth = (access_token) ? (true) : (false);
+      let user = (access_token) ? (tokenService(access_token)) : (null);
       return {
         ...state,
         user,

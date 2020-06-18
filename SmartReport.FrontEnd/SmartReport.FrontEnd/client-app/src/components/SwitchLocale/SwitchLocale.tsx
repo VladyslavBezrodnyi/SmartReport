@@ -4,32 +4,24 @@ import { bindActionCreators } from 'redux'
 import { loadLocales } from '../../redux/actions/locales-actions'
 import { SwitcherProps } from '../../types/component-types'
 import { Select } from 'antd'
+import { Radio } from 'antd';
 
 const { Option } = Select;
 
 class Switcher extends React.PureComponent<SwitcherProps>{
-  state = {
-    value: 'en',
-    locales: Object.keys(this.props.locales)
-  }
-
-  handleChange = (value: string) => {
-    this.setState({
-      value
-    });
-    this.props.loadLocales(value)
+  handleChange = (e: any) => {
+    this.props.loadLocales(e.target.value)
   }
 
   render() {
     return (
-      <Select defaultValue={this.state.value}
-        value={this.state.value}
-        style={{ width: 120 }}
+      <Radio.Group defaultValue={this.props.currentLocale}
+        buttonStyle="solid"
         onChange={this.handleChange}>
-        {this.state.locales.map((locale: string, i: number) => {
-          return (<Option value={locale} key={i}>{locale}</Option>);
+        {Object.keys(this.props.locales).map((locale: string, i: number) => {
+          return (<Radio.Button value={locale} key={i}>{locale}</Radio.Button>);
         })}
-      </Select>
+      </Radio.Group>
     )
   }
 }

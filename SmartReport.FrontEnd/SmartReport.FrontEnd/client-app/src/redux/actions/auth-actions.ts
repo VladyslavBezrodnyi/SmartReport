@@ -1,4 +1,5 @@
-import { LoginDTO } from './../../types/account-types';
+import { REGISTRATION_SUCCESS } from './../../constants/auth-constants';
+import { LoginDTO, RegistrationDTO } from './../../types/account-types';
 import { environment } from './../../environment/environment';
 import {
   LOGIN_SUCCESS,
@@ -6,27 +7,21 @@ import {
 } from '../../constants/auth-constants';
 import axios from 'axios';
 import { message } from 'antd';
-import jwt_decoded from 'jwt-decode'
 import { AppUser } from '../../types/common-types';
+import tokenService from '../../services/token-service';
 
 export const login = (loginDTO: LoginDTO) => (despatch: any) => {
-  axios.post(environment.API_URL + '/api/account/login', {
+  axios.post(environment.API_URL + '/api/Account/login', {
     ...loginDTO
   })
     .then((response: any) => {
-      console.log(response);
-      debugger
-      const tokenPayload: { [id: string]: string; } = jwt_decoded<{ [id: string]: string; }>(response.data.accessToken);
-      console.log(tokenPayload);
+      if (response.data.accessToken) {
+        localStorage.setItem('access_token', response.data.accessToken as string);
+      }
       despatch({
         type: LOGIN_SUCCESS,
         payload: {
-          user: {
-            id: tokenPayload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/nameidentifier"],
-            roles: tokenPayload["http://schemas.microsoft.com/ws/2008/06/identity/claims/role"],
-            userName: tokenPayload["http://schemas.xmlsoap.org/ws/2005/05/identity/claims/name"],
-            access_token: response.data.accessToken
-          } as AppUser
+          user: tokenService(response.data.accessToken)
         }
       });
     })
@@ -37,15 +32,24 @@ export const login = (loginDTO: LoginDTO) => (despatch: any) => {
 };
 
 export const logout = () => (despatch: any): void => {
+  localStorage.removeItem('access_token');
   despatch({
     type: LOGOUT_SUCCESS,
     payload: {}
   });
 };
 
-export const registration = () => (despatch: any): void => {
-  despatch({
-    type: LOGOUT_SUCCESS,
-    payload: {}
-  });
+export const register = (registerDTO: RegistrationDTO) => (despatch: any): void => {
+  axios.post(environment.API_URL + '/api/Account/register', {
+    ...registerDTO
+  }).then((response: any) => {
+    message.success("Success!")
+    despatch({
+      type: REGISTRATION_SUCCESS,
+      payload: {}
+    });
+  }).then((err: any) => {
+    message.warning("Warning!");
+    console.log(err);
+  })
 };

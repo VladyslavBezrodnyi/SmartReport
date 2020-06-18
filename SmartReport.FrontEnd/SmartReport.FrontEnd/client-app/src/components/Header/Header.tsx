@@ -5,7 +5,7 @@ import { HeaderProps } from '../../types/component-types';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { registration, login, logout } from '../../redux/actions/auth-actions';
+import { login, logout } from '../../redux/actions/auth-actions';
 import { LoginDTO } from '../../types/account-types';
 import SwitchLocale from '../SwitchLocale/SwitchLocale'
 import { FormattedMessage } from 'react-intl';
@@ -76,13 +76,13 @@ class Header extends React.PureComponent<HeaderProps>{
               </Menu>
             </Col>
             <Col span={4}>
-              <SwitchLocale/>
+              <SwitchLocale />
             </Col>
             {this.props.auth?.isAuthenticated ? this.logOutButton() : this.loginButton()}
           </Row>
         </Layout.Header>
         <Modal
-          title="LogIn"
+          title={<FormattedMessage id="header.login" defaultMessage="Error!" />}
           visible={this.state.visible}
           footer={null}
           onCancel={this.handleCancel}
@@ -95,7 +95,7 @@ class Header extends React.PureComponent<HeaderProps>{
             onFinishFailed={this.onFinishFailed}
           >
             <Form.Item
-              label="Username"
+              label={<FormattedMessage id="email" defaultMessage="Error!" />}
               name="email"
               rules={[{ required: true, message: 'Please input your username!' }]}
             >
@@ -103,7 +103,7 @@ class Header extends React.PureComponent<HeaderProps>{
             </Form.Item>
 
             <Form.Item
-              label="Password"
+              label={<FormattedMessage id="password" defaultMessage="Error!" />}
               name="password"
               rules={[{ required: true, message: 'Please input your password!' }]}
             >
@@ -112,7 +112,7 @@ class Header extends React.PureComponent<HeaderProps>{
 
             <Form.Item {...tailLayout}>
               <Button type="primary" htmlType="submit">
-                LogIn
+                <FormattedMessage id="submit" defaultMessage="Error!" />
               </Button>
             </Form.Item>
           </Form>
@@ -132,7 +132,6 @@ const mapDispatchToProps = (dispatch: any) => {
   return bindActionCreators({
     login: login,
     logout: logout,
-    registration: registration,
   }, dispatch)
 }
 

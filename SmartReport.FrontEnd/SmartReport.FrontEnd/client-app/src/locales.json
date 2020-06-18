@@ -3,12 +3,22 @@
         "header.home": "Home",
         "header.login": "LogIn",
         "header.logout": "LogOut",
+        "name": "Name",
+        "email": "Email",
+        "password": "Password",
+        "username": "UserName",
+        "submit": "Submit",
         "home.hello": "Hello!"
     },
     "ukr": {
         "header.home": "Головна",
         "header.login": "Увійти",
         "header.logout": "Вийти",
+        "name": "Ім'я",
+        "email": "Пошта",
+        "password": "Пароль",
+        "username": "Логін",
+        "submit": "Підтвердити",
         "home.hello": "Привіт!"
     }
 }

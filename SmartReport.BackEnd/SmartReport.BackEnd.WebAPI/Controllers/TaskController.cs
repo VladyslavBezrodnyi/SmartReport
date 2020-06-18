@@ -14,10 +14,25 @@ namespace SmartReport.BackEnd.WebAPI.Controllers
     public class TaskController : ControllerBase
     {
         private readonly ITaskService _taskService;
+        public readonly ICurrentUser _currentUser;
 
-        public TaskController(ITaskService taskService)
+        public TaskController(ITaskService taskService, ICurrentUser currentUser)
         {
             _taskService = taskService;
+            _currentUser = currentUser;
+        }
+        [HttpGet]
+        [Route("GetMissedTasks")]
+        public async Task CreGetMissedTasksate()
+        {
+            await _taskService.GetMissedTasks(_currentUser.UserId.ToString());
+        }
+
+        [HttpPost]
+        [Route("CreateTaskForUser/{taskId}/{userId}")]
+        public async Task CreateTaskForUser(int taskId, string userId)
+        {
+            await _taskService.CreateTaskForUser(taskId, userId);
         }
 
         [HttpPut]
