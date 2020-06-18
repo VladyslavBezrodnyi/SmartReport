@@ -1,4 +1,4 @@
-import { LoginDTO, RegistrationDTO } from './account-types';
+import { LoginDTO, RegistrationDTO } from './DTO-types';
 import { AppUser } from "./common-types";
 
 export interface HeaderProps {

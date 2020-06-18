@@ -8,7 +8,7 @@ import { connect } from 'react-redux'
 import HeaderContainer from '../Header/Header';
 import { IntlProvider } from 'react-intl-redux'
 import HomeContainer from '../Home/Home';
-import { AppProps } from '../../types/component-types';
+import { AppProps } from '../../types/props-types';
 
 
 class CreationTask extends React.PureComponent<AppProps>{
@@ -18,7 +18,7 @@ class CreationTask extends React.PureComponent<AppProps>{
 
   render() {
     return (
-     
+     <div></div>
     );
   }
 }

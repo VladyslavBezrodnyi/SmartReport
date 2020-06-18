@@ -1,12 +1,12 @@
 import React from 'react';
 import { Layout, Menu, Button, Row, Col, Form, Modal, Input } from 'antd';
 import "./Header.css";
-import { HeaderProps } from '../../types/component-types';
+import { HeaderProps } from '../../types/props-types';
 import { Link } from 'react-router-dom';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { login, logout } from '../../redux/actions/auth-actions';
-import { LoginDTO } from '../../types/account-types';
+import { LoginDTO } from '../../types/DTO-types';
 import SwitchLocale from '../SwitchLocale/SwitchLocale'
 import { FormattedMessage } from 'react-intl';
 
@@ -68,12 +68,10 @@ class Header extends React.PureComponent<HeaderProps>{
   render() {
     return (
       <div>
-        <Layout.Header className="header">
+        <Layout.Header className="site-layout-background" style={{ padding: 0 }}>
           <Row>
-            <Col span={14} >
-              <Menu theme="dark" mode="horizontal">
-                <Menu.Item key="1" ><Link to="/"><FormattedMessage id="header.home" defaultMessage="Error!" /></Link></Menu.Item>
-              </Menu>
+            <Col span={14}>
+              {this.props.children}
             </Col>
             <Col span={4}>
               <SwitchLocale />

@@ -1,11 +1,11 @@
 import React from 'react';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
-import { AccountCreationProps } from '../../types/component-types';
+import { AccountCreationProps } from '../../types/props-types';
 import { register } from '../../redux/actions/auth-actions';
 import { Form, Input, Button } from 'antd';
 import { FormattedMessage } from 'react-intl';
-import { RegistrationDTO } from '../../types/account-types';
+import { RegistrationDTO } from '../../types/DTO-types';
 
 const layout = {
     labelCol: { span: 8 },

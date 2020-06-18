@@ -1,5 +1,5 @@
 import { REGISTRATION_SUCCESS } from './../../constants/auth-constants';
-import { LoginDTO, RegistrationDTO } from './../../types/account-types';
+import { LoginDTO, RegistrationDTO } from '../../types/DTO-types';
 import { environment } from './../../environment/environment';
 import {
   LOGIN_SUCCESS,

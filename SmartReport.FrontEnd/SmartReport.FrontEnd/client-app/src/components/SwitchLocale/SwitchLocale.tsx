@@ -2,7 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import { bindActionCreators } from 'redux'
 import { loadLocales } from '../../redux/actions/locales-actions'
-import { SwitcherProps } from '../../types/component-types'
+import { SwitcherProps } from '../../types/props-types'
 import { Select } from 'antd'
 import { Radio } from 'antd';
 
