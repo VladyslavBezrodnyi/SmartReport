@@ -7,6 +7,7 @@ namespace SmartReport.BackEnd.DataAccessLayer.Interfaces
 {
     public interface IUnitOfWork : IDisposable
     {
+        public IAccountRepository Account { get; }
         public ITaskRepository Tasks { get; }
         public IReportRepository Reports { get; }
         public IPlaceRepository Places { get; }

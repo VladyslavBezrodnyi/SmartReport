@@ -257,6 +257,9 @@ namespace SmartReport.BackEnd.DataAccessLayer.Migrations
                     b.Property<bool>("EmailConfirmed")
                         .HasColumnType("bit");
 
+                    b.Property<bool>("IsWork")
+                        .HasColumnType("bit");
+
                     b.Property<bool>("LockoutEnabled")
                         .HasColumnType("bit");
 
@@ -325,6 +328,26 @@ namespace SmartReport.BackEnd.DataAccessLayer.Migrations
                     b.HasIndex("TaskId");
 
                     b.ToTable("UserTasks");
+                });
+
+            modelBuilder.Entity("SmartReport.BackEnd.CrossCuttingConcern.Entities.VisitDate", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<DateTimeOffset>("Date")
+                        .HasColumnType("datetimeoffset");
+
+                    b.Property<string>("UserId")
+                        .HasColumnType("nvarchar(450)");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("VisitDates");
                 });
 
             modelBuilder.Entity("Microsoft.AspNetCore.Identity.IdentityRoleClaim<string>", b =>
@@ -421,6 +444,14 @@ namespace SmartReport.BackEnd.DataAccessLayer.Migrations
                         .HasForeignKey("UserId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+                });
+
+            modelBuilder.Entity("SmartReport.BackEnd.CrossCuttingConcern.Entities.VisitDate", b =>
+                {
+                    b.HasOne("SmartReport.BackEnd.CrossCuttingConcern.Entities.User", "User")
+                        .WithMany("VisitDates")
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.SetNull);
                 });
 #pragma warning restore 612, 618
         }

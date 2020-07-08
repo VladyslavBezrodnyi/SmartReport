@@ -15,6 +15,17 @@ namespace SmartReport.BackEnd.DataAccessLayer.Repositories
         private IReportRepository _reportRepository;
         private IPlaceRepository _placeRepository;
         private IRatingRepository _ratingRepository;
+        private IAccountRepository _accountRepository;
+
+        public IAccountRepository Account
+        {
+            get
+            {
+                if (_accountRepository == null)
+                    _accountRepository = new AccountRepository(_context);
+                return _accountRepository;
+            }
+        }
 
         public ITaskRepository Tasks
         {

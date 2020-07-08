@@ -25,7 +25,7 @@ namespace SmartReport.BackEnd.CrossCuttingConcern.Mappers
             Report report = new Report
             {
                 ReportText = reportDTO.ReportText,
-                Date = reportDTO.Date,
+                Date = reportDTO.Date.ToUniversalTime(),
             };
             return report;
         }

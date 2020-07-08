@@ -8,7 +8,23 @@
         "password": "Password",
         "username": "UserName",
         "submit": "Submit",
-        "home.hello": "Hello!"
+        "home.hello": "Hello",
+        "header.accounts": "Accounts",
+        "registration": "Create user",
+        "db": "DataBase",
+        "user.createReport": "Create Report",
+        "user.tasks": "Tasks",
+        "user.reportDescription": "Report Description",
+        "header.tasks": "Tasks",
+        "description": "Description",
+        "admin.accounts.assignTask": "Assign task",
+        "admin.accounts.tasks": "Tasks",
+        "admin.accounts": "Accounts",
+        "admin.createTask": "Create task",
+        "admin.createTask.title": "Title",
+        "admin.createTask.description": "Description",
+        "user.work": "You are at work!",
+        "user.notWork": "You are not at work!"
     },
     "ukr": {
         "header.home": "Головна",
@@ -19,6 +35,22 @@
         "password": "Пароль",
         "username": "Логін",
         "submit": "Підтвердити",
-        "home.hello": "Привіт!"
+        "home.hello": "Привіт",
+        "header.accounts": "Аккаунти",
+        "registration": "Створити користувача",
+        "db": "База Даних",
+        "user.createReport": "Створити звіт",
+        "user.tasks": "Завдання",
+        "user.reportDescription": "Опис звіту",
+        "header.tasks": "Завдання",
+        "description": "Опис",
+        "admin.accounts.assignTask": "Додати завдання",
+        "admin.accounts.tasks": "Завдання",
+        "admin.accounts": "Акаунти",
+        "admin.createTask": "Створити завдання",
+        "admin.createTask.title": "Заголовок",
+        "admin.createTask.description": "Опис",
+        "user.work": "Ви працюєте. Добре!",
+        "user.notWork": "Ви знаходитесь не на робочому месте!"
     }
 }

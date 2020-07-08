@@ -1,0 +1,13 @@
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\bin\Debug\netcoreapp3.1\SmartReport.Emulator.exe
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\bin\Debug\netcoreapp3.1\SmartReport.Emulator.deps.json
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\bin\Debug\netcoreapp3.1\SmartReport.Emulator.runtimeconfig.json
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\bin\Debug\netcoreapp3.1\SmartReport.Emulator.runtimeconfig.dev.json
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\bin\Debug\netcoreapp3.1\SmartReport.Emulator.dll
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\bin\Debug\netcoreapp3.1\SmartReport.Emulator.pdb
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.csprojAssemblyReference.cache
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.AssemblyInfoInputs.cache
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.AssemblyInfo.cs
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.csproj.CoreCompileInputs.cache
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.dll
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.pdb
+R:\smart-report\SmartReport\SmartReport.Emulator\SmartReport.Emulator\obj\Debug\netcoreapp3.1\SmartReport.Emulator.genruntimeconfig.cache

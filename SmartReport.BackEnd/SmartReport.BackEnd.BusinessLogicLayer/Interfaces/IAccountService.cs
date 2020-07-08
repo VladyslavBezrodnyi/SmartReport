@@ -1,4 +1,5 @@
 ﻿using SmartReport.BackEnd.CrossCuttingConcern.DTOs;
+using SmartReport.BackEnd.CrossCuttingConcern.Entities;
 using SmartReport.BackEnd.CrossCuttingConcern.Responses;
 using System;
 using System.Collections.Generic;
@@ -9,7 +10,10 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Interfaces
 {
     public interface IAccountService
     {
-        Task<TokenResponse> LoginAsync(LoginDTO loginDTO);
-        Task RegisterAsync(RegistrationDTO registrationDTO);
+        System.Threading.Tasks.Task<bool> SetVisitDate(string userId);
+        System.Threading.Tasks.Task<VisitDateDTO> GetVisitDateStateNow(string userId, DateTimeOffset clientTime);
+        System.Threading.Tasks.Task<IList<UserDTO>> GetUsers();
+        System.Threading.Tasks.Task<TokenResponse> LoginAsync(LoginDTO loginDTO);
+        System.Threading.Tasks.Task<UserDTO> RegisterAsync(RegistrationDTO registrationDTO);
     }
 }

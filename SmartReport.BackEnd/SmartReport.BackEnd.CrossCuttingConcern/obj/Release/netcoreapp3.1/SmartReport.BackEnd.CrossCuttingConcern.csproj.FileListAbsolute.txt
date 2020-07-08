@@ -1,0 +1,9 @@
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\bin\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.deps.json
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\bin\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.dll
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\bin\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.pdb
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\obj\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.AssemblyInfoInputs.cache
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\obj\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.AssemblyInfo.cs
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\obj\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.csproj.CoreCompileInputs.cache
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\obj\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.dll
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\obj\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.pdb
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.CrossCuttingConcern\obj\Release\netcoreapp3.1\SmartReport.BackEnd.CrossCuttingConcern.csprojAssemblyReference.cache

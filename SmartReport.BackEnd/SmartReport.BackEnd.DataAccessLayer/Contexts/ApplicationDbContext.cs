@@ -15,6 +15,7 @@ namespace SmartReport.BackEnd.DataAccessLayer.Contexts
         public virtual DbSet<UserTask> UserTasks { get; set; }
         public virtual DbSet<Task> Tasks { get; set; }
         public virtual DbSet<Place> Places { get; set; }
+        public virtual DbSet<VisitDate> VisitDates { get; set; }
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
          : base(options)
         {
@@ -36,6 +37,8 @@ namespace SmartReport.BackEnd.DataAccessLayer.Contexts
                 .HasKey(k => new { k.ReportId, k.TaskId });
             builder.Entity<UserTask>()
                 .HasKey(k => new { k.UserId, k.TaskId });
+            builder.Entity<VisitDate>()
+                .HasKey(k => k.Id);
 
             builder.Entity<UserTask>()
                 .HasOne(obj => obj.User)
@@ -65,6 +68,12 @@ namespace SmartReport.BackEnd.DataAccessLayer.Contexts
                 .HasOne(obj => obj.Place)
                 .WithMany(obj => obj.Tasks)
                 .HasForeignKey(k => k.PlaceId)
+                .OnDelete(DeleteBehavior.SetNull);
+
+            builder.Entity<VisitDate>()
+                .HasOne(obj => obj.User)
+                .WithMany(obj => obj.VisitDates)
+                .HasForeignKey(k => k.UserId)
                 .OnDelete(DeleteBehavior.SetNull);
 
             base.OnModelCreating(builder);

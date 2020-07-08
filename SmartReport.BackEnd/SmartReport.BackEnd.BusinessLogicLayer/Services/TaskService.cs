@@ -5,6 +5,8 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 using System.Threading.Tasks;
+using System.Linq;
+using SmartReport.BackEnd.CrossCuttingConcern.Mappers;
 
 namespace SmartReport.BackEnd.BusinessLogicLayer.Services
 {
@@ -15,11 +17,14 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Services
         {
             _db = db;
         }
+        public async Task<IList<TaskDTO>> GetAll()
+        {
+            return await _db.Tasks.GetAll();
+        }
         public async Task<IList<TaskDTO>> GetMissedTasks(string userId)
         {
             return await _db.Tasks.GetMissedTasks(userId);
         }
-
         public async System.Threading.Tasks.Task CreateTaskForUser(int taskId, string userId)
         {
             await _db.Tasks.CreateTaskForUser(taskId, userId);

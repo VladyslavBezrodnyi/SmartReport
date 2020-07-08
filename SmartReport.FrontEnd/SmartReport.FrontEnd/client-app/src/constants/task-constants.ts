@@ -1,3 +1,4 @@
 export const CREATE_TASK = 'CREATE_TASK';
 export const CREATE_TASK_FOR_USER = 'CREATE_TASK_FOR_USER';
 export const GET_TASKS = 'GET_TASKS';
+export const GET_USER_TASKS = 'GET_USER_TASKS';

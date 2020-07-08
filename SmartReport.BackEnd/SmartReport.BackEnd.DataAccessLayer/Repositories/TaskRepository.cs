@@ -22,8 +22,16 @@ namespace SmartReport.BackEnd.DataAccessLayer.Repositories
         {
             _context = context;
         }
-        
-        public async Task<IList<TaskDTO>> GetMissedTasks(string userId)
+
+        public async Task<IList<TaskDTO>> GetAll()
+        {
+            return await _context.Tasks
+                .Include(t => t.Place)
+                .Select(t => t.ToTaskDTO())
+                .ToListAsync();
+        }
+
+        public async System.Threading.Tasks.Task<IList<TaskDTO>> GetMissedTasks(string userId)
         {
             return await _context.UserTasks
                 .Include(ut => ut.Task)

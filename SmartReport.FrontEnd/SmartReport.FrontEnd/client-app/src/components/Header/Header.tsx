@@ -2,7 +2,7 @@ import React from 'react';
 import { Layout, Menu, Button, Row, Col, Form, Modal, Input } from 'antd';
 import "./Header.css";
 import { HeaderProps } from '../../types/props-types';
-import { Link } from 'react-router-dom';
+import { Link, withRouter } from 'react-router-dom';
 import { bindActionCreators } from 'redux'
 import { connect } from 'react-redux'
 import { login, logout } from '../../redux/actions/auth-actions';
@@ -38,16 +38,20 @@ class Header extends React.PureComponent<HeaderProps>{
 
   loginButton = () => {
     return (
-      <Col span={4} offset={2}>
+      <Col xs={8} xl={6}>
         <Button type="primary" size="middle" onClick={this.showModal}><FormattedMessage id="header.login" defaultMessage="Error!" /></Button>
       </Col>
     );
   }
 
+  logOut1 = () => {
+    this.props.logout();
+    this.props.history.push(`/`)
+  }
   logOutButton = () => {
     return (
-      <Col span={4} offset={2}>
-        <Button type="primary" size="middle" onClick={this.props.logout}><FormattedMessage id="header.logout" defaultMessage="Error!" /></Button>
+      <Col xs={8} xl={6}>
+        <Button type="primary" size="middle" onClick={this.logOut1}><FormattedMessage id="header.logout" defaultMessage="Error!" /></Button>
       </Col>
     );
   }
@@ -65,17 +69,30 @@ class Header extends React.PureComponent<HeaderProps>{
     });
   };
 
+  getSwitchLocale = () => {
+    if (/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent)) {
+      return (
+        <Col xs={16} xl={16}>
+        </Col>);
+    } else {
+      return (
+        <>
+          <Col xs={4} xl={10}>
+          </Col>
+          <Col xs={12} xl={6}>
+            <SwitchLocale />
+          </Col>
+        </>
+      );
+    }
+  }
+
   render() {
     return (
       <div>
         <Layout.Header className="site-layout-background" style={{ padding: 0 }}>
           <Row>
-            <Col span={14}>
-              {this.props.children}
-            </Col>
-            <Col span={4}>
-              <SwitchLocale />
-            </Col>
+            {this.getSwitchLocale()}
             {this.props.auth?.isAuthenticated ? this.logOutButton() : this.loginButton()}
           </Row>
         </Layout.Header>
@@ -95,7 +112,7 @@ class Header extends React.PureComponent<HeaderProps>{
             <Form.Item
               label={<FormattedMessage id="email" defaultMessage="Error!" />}
               name="email"
-              rules={[{ required: true, message: 'Please input your username!' }]}
+              rules={[{ required: true, message: '' }]}
             >
               <Input />
             </Form.Item>
@@ -103,7 +120,7 @@ class Header extends React.PureComponent<HeaderProps>{
             <Form.Item
               label={<FormattedMessage id="password" defaultMessage="Error!" />}
               name="password"
-              rules={[{ required: true, message: 'Please input your password!' }]}
+              rules={[{ required: true, message: '' }]}
             >
               <Input.Password />
             </Form.Item>
@@ -133,5 +150,5 @@ const mapDispatchToProps = (dispatch: any) => {
   }, dispatch)
 }
 
-const HeaderContainer = connect(mapStateToProps, mapDispatchToProps)(Header as any);
+const HeaderContainer = withRouter(connect(mapStateToProps, mapDispatchToProps)(Header as any));
 export default HeaderContainer;

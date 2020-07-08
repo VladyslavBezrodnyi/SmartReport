@@ -1,21 +1,26 @@
 {
   "format": 1,
   "restore": {
-    "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj": {}
+    "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj": {}
   },
   "projects": {
-    "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj": {
+    "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj",
+        "projectUniqueName": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj",
         "projectName": "SmartReport.BackEnd.CrossCuttingConcern",
-        "projectPath": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj",
-        "packagesPath": "C:\\Users\\bezrodnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\obj\\",
+        "projectPath": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bezrodnyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -38,10 +43,6 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
-            "Microsoft.AspNet.Identity.EntityFramework": {
-              "target": "Package",
-              "version": "[2.2.3, )"
-            },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
               "version": "[3.1.4, )"
@@ -74,18 +75,23 @@
         }
       }
     },
-    "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj": {
+    "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj",
+        "projectUniqueName": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj",
         "projectName": "SmartReport.BackEnd.DataAccessLayer",
-        "projectPath": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj",
-        "packagesPath": "C:\\Users\\bezrodnyi\\.nuget\\packages\\",
-        "outputPath": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\obj\\",
+        "projectPath": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\SmartReport.BackEnd.DataAccessLayer.csproj",
+        "packagesPath": "C:\\Users\\Lenovo\\.nuget\\packages\\",
+        "outputPath": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.DataAccessLayer\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Microsoft\\Xamarin\\NuGet\\",
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "C:\\Users\\bezrodnyi\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Lenovo\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -97,8 +103,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj": {
-                "projectPath": "C:\\MySpace\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj"
+              "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj": {
+                "projectPath": "R:\\smart-report\\SmartReport\\SmartReport.BackEnd\\SmartReport.BackEnd.CrossCuttingConcern\\SmartReport.BackEnd.CrossCuttingConcern.csproj"
               }
             }
           }

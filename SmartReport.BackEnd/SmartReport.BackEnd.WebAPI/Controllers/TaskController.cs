@@ -21,25 +21,33 @@ namespace SmartReport.BackEnd.WebAPI.Controllers
             _taskService = taskService;
             _currentUser = currentUser;
         }
+
+        [HttpGet]
+        [Route("GetAll")]
+        public async Task<IList<TaskDTO>> GetAll()
+        {
+            return await _taskService.GetAll();
+        }
+
         [HttpGet]
         [Route("GetMissedTasks")]
-        public async Task CreGetMissedTasksate()
+        public async Task<IList<TaskDTO>> GetMissedTasks()
         {
-            await _taskService.GetMissedTasks(_currentUser.UserId.ToString());
+            return await _taskService.GetMissedTasks(_currentUser.UserId.ToString());
         }
 
         [HttpPost]
-        [Route("CreateTaskForUser/{taskId}/{userId}")]
-        public async Task CreateTaskForUser(int taskId, string userId)
+        [Route("CreateTaskForUser")]
+        public async Task CreateTaskForUser([FromBody]UserTaskDTO userTask)
         {
-            await _taskService.CreateTaskForUser(taskId, userId);
+            await _taskService.CreateTaskForUser(userTask.TaskId, userTask.UserId);
         }
 
         [HttpPut]
         [Route("create")]
-        public async Task Create([FromBody]TaskDTO taskDTO)
+        public async Task<TaskDTO> Create([FromBody]TaskDTO taskDTO)
         {
-            await _taskService.Create(taskDTO);
+            return await _taskService.Create(taskDTO);
         }
     }
 }

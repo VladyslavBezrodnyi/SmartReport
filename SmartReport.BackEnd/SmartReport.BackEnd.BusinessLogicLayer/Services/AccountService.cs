@@ -9,6 +9,7 @@ using SmartReport.BackEnd.CrossCuttingConcern.Mappers;
 using SmartReport.BackEnd.CrossCuttingConcern.Responses;
 using SmartReport.BackEnd.CrossCuttingConcern.Validators;
 using SmartReport.BackEnd.DataAccessLayer.Contexts;
+using SmartReport.BackEnd.DataAccessLayer.Interfaces;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
@@ -25,12 +26,57 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Services
     {
         private readonly UserManager<User> _userManager;
         private readonly AuthConfiguration _authConfiguration;
+        private readonly IUnitOfWork _db;
 
         public AccountService(UserManager<User> userManager,
-                              AuthConfiguration authConfiguration)
+                              AuthConfiguration authConfiguration,
+                              IUnitOfWork db)
         {
             _userManager = userManager;
             _authConfiguration = authConfiguration;
+            _db = db;
+        }
+        public async System.Threading.Tasks.Task<bool> SetVisitDate(string userId)
+        {
+            return await _db.Account.SetVisitDate(userId);
+        }
+
+        public async Task<VisitDateDTO> GetVisitDateStateNow(string userId, DateTimeOffset clientTime)
+        {
+            var visitDateList = await _db.Account.GetVisitDate(userId, clientTime);
+            var count = visitDateList.Count();
+            VisitDateDTO visitDateDTO = new VisitDateDTO
+            {
+                IsWork = (count % 2 != 0)
+            };
+            if (visitDateDTO.IsWork)
+            {
+                return visitDateDTO;
+            }
+            /*
+            var visitDateArray = visitDateList.ToArray();
+            for (int i = count - 1; i >= 0; i -= 2)
+            {
+                if (visitDateArray[i].Date.DayOfYear == clientTime.DayOfYear &&
+                    visitDateArray[i].Date.Year == clientTime.Year &&
+                    (visitDateArray[i - 1].Date.DayOfYear == clientTime.DayOfYear && visitDateArray[i - 2].Date.DayOfYear != clientTime.DayOfYear &&))
+                {
+                    if ()
+                    {
+
+                    }
+
+                }
+            }
+            */
+            return visitDateDTO;
+           
+        }
+
+        public async Task<IList<UserDTO>> GetUsers()
+        {
+            var users = await _userManager.GetUsersInRoleAsync("user");
+            return users.Select(u => u.ToUserDTO()).ToList();
         }
 
         public async Task<TokenResponse> LoginAsync(LoginDTO loginDTO)
@@ -47,7 +93,7 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Services
             return GenerateJwtToken(foundUser, userRole);
         }
 
-        public async Task RegisterAsync(RegistrationDTO registrationDTO)
+        public async Task<UserDTO> RegisterAsync(RegistrationDTO registrationDTO)
         {
             ValidationResults result = ModelValidator.IsValid(registrationDTO);
             if (!result.Successed)
@@ -70,6 +116,7 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Services
             {
                 throw new Exception("Can not add new user to user role");
             }
+            return (await FindUserByEmail(newUser.Email)).ToUserDTO();
         }
 
         private async Task CheckIfThePasswordIsValid(string password)

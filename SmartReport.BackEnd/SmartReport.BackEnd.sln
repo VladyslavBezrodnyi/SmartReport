@@ -3,13 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30114.105
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartReport.BackEnd.CrossCuttingConcern", "SmartReport.BackEnd.CrossCuttingConcern\SmartReport.BackEnd.CrossCuttingConcern.csproj", "{7C31DD86-C31B-4E12-A625-8F3948B93CDE}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartReport.BackEnd.DataAccessLayer", "SmartReport.BackEnd.DataAccessLayer\SmartReport.BackEnd.DataAccessLayer.csproj", "{D2054F8A-0327-43AB-8565-CAAD1A817AA7}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartReport.BackEnd.BusinessLogicLayer", "SmartReport.BackEnd.BusinessLogicLayer\SmartReport.BackEnd.BusinessLogicLayer.csproj", "{3BB4D3F1-9017-4670-A774-CCF426E2497D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReport.BackEnd.WebAPI", "SmartReport.BackEnd.WebAPI\SmartReport.BackEnd.WebAPI.csproj", "{4F8F2429-32DA-4745-BF4D-10DE0726297B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartReport.BackEnd.WebAPI", "SmartReport.BackEnd.WebAPI\SmartReport.BackEnd.WebAPI.csproj", "{4F8F2429-32DA-4745-BF4D-10DE0726297B}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartReport.BackEnd.CrossCuttingConcern", "SmartReport.BackEnd.CrossCuttingConcern\SmartReport.BackEnd.CrossCuttingConcern.csproj", "{E78C3C0F-89AB-4754-AF53-66DC1B8C58C1}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{7C31DD86-C31B-4E12-A625-8F3948B93CDE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{7C31DD86-C31B-4E12-A625-8F3948B93CDE}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{7C31DD86-C31B-4E12-A625-8F3948B93CDE}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{7C31DD86-C31B-4E12-A625-8F3948B93CDE}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D2054F8A-0327-43AB-8565-CAAD1A817AA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D2054F8A-0327-43AB-8565-CAAD1A817AA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D2054F8A-0327-43AB-8565-CAAD1A817AA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -33,6 +29,10 @@ Global
 		{4F8F2429-32DA-4745-BF4D-10DE0726297B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4F8F2429-32DA-4745-BF4D-10DE0726297B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4F8F2429-32DA-4745-BF4D-10DE0726297B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E78C3C0F-89AB-4754-AF53-66DC1B8C58C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78C3C0F-89AB-4754-AF53-66DC1B8C58C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78C3C0F-89AB-4754-AF53-66DC1B8C58C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78C3C0F-89AB-4754-AF53-66DC1B8C58C1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

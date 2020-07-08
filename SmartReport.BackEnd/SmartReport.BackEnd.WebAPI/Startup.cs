@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Builder;
@@ -9,6 +10,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.FileProviders;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
@@ -16,6 +18,7 @@ using SmartReport.BackEnd.BusinessLogicLayer.DBInitializer;
 using SmartReport.BackEnd.BusinessLogicLayer.Extensions;
 using SmartReport.BackEnd.BusinessLogicLayer.Interfaces;
 using SmartReport.BackEnd.BusinessLogicLayer.Services;
+using SmartReport.BackEnd.WebAPI.Hubs;
 using Swashbuckle.AspNetCore.SwaggerUI;
 
 namespace SmartReport.BackEnd
@@ -68,17 +71,28 @@ namespace SmartReport.BackEnd
                     },
                 });
             });
-
+         //   services.AddDirectoryBrowser();
             services.AddCors(options =>
             {
                 options.AddPolicy("AllowAnyOrigin", builder => builder
                     .SetIsOriginAllowed(_ => true)
+                    .WithOrigins("https://smart-report-frontend.azurewebsites.net")
+                    .WithOrigins("http://smart-report-frontend.azurewebsites.net")
+                    .WithOrigins("https://localhost:44362")
+                    .WithOrigins("http://localhost:44362")
+                    .WithOrigins("https://localhost:3000")
+                    .WithOrigins("http://localhost:3000")
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials());
             });
-
+            services.AddSignalR(o =>
+            {
+                o.EnableDetailedErrors = true;
+            });
         }
+
+    //    string path = Path.Combine(Directory.GetCurrentDirectory(), "wwwroot", "backups");
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -86,6 +100,8 @@ namespace SmartReport.BackEnd
             {
                 app.UseDeveloperExceptionPage();
             }
+
+           // app.UseStaticFiles();
 
             app.UseHttpsRedirection();
             app.UseRouting();
@@ -110,10 +126,17 @@ namespace SmartReport.BackEnd
 
             app.UseAuthentication();
             app.UseAuthorization();
-
+            /*
+            app.UseDirectoryBrowser(new DirectoryBrowserOptions
+            {
+                FileProvider = new PhysicalFileProvider(path),
+                RequestPath = "/backups"
+            });
+            */
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllers();
+                endpoints.MapHub<NotificationHub>("/notification");
             });
             DatabaseInitializer.InitializeAsync(app.ApplicationServices).Wait();
         }

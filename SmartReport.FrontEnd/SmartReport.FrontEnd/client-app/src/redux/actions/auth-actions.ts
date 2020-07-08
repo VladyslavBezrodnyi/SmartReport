@@ -46,10 +46,14 @@ export const register = (registerDTO: RegistrationDTO) => (despatch: any): void 
     message.success("Success!")
     despatch({
       type: REGISTRATION_SUCCESS,
-      payload: {}
+      payload: {
+        userResponse: {
+          ...response.data
+        }
+      }
     });
-  }).then((err: any) => {
-    message.warning("Warning!");
+  }).catch((err: any) => {
+    // message.warning("Warning!");
     console.log(err);
   })
 };

@@ -7,9 +7,11 @@ import {
   } from '../../constants/auth-constants';
 import { AppUser } from '../../types/common-types';
 import tokenService from '../../services/token-service';
+import {RECIEVE_WEBSOCKET_MESSAGE} from '../../constants/socket-constants';
 
 const initialState: AuthState = {
   isAuthenticated: false,
+  work: null,
   user: null
 };
 
@@ -23,16 +25,17 @@ const authReducer = (state: AuthState = initialState, action: Action): AuthState
         } as AppUser,
         isAuthenticated: true,
       };
-    case REGISTRATION_SUCCESS:
-      return {
-        ...state,
-      };
     case LOGOUT_SUCCESS:
       return {
         ...state,
         user: null,
         isAuthenticated: false,
       };
+    case RECIEVE_WEBSOCKET_MESSAGE:
+      return{
+        ...state,
+        work: action.payload.message
+      }
     default:
       const access_token = localStorage.getItem('access_token');
       let isAuth = (access_token) ? (true) : (false);

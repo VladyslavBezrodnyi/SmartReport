@@ -29,7 +29,7 @@ namespace SmartReport.BackEnd.CrossCuttingConcern.Mappers
                 Description = taskDTO.Description,
                 StartDate = taskDTO.StartDate,
                 DeadLine = taskDTO.DeadLine,
-                PlaceId = taskDTO?.Place.Id
+                PlaceId = taskDTO.Place?.Id
             };
             return task;
         }
