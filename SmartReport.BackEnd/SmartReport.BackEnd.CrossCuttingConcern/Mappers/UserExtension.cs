@@ -25,7 +25,8 @@ namespace SmartReport.BackEnd.CrossCuttingConcern.Mappers
                 Id = user.Id,
                 UserName = user.Email,
                 Email = user.Email,
-                Name = user.Name
+                Name = user.Name,
+                IsWork = user.IsWork
                 //TODO
             };
         }

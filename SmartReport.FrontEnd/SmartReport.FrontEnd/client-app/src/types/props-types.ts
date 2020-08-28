@@ -59,3 +59,15 @@ export interface UserTasksListProps{
   getUserTasksList(): void;
   createReport(reportDTO: ReportDTO): any;
 }
+
+export interface UserReportListProps{
+  match: any;
+  userReportsList: ReportDTO[];
+  getReportByUserId(userId: string): void;
+}
+
+export interface ReportListProps{
+  user: AppUser;
+  userReportsList: ReportDTO[];
+  getReportByUserId(userId: string): void;
+}

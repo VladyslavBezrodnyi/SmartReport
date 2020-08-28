@@ -24,7 +24,12 @@
         "admin.createTask.title": "Title",
         "admin.createTask.description": "Description",
         "user.work": "You are at work!",
-        "user.notWork": "You are not at work!"
+        "user.notWork": "You are not at work!",
+        "admin.accounts.viewReports": "Reports",
+        "admin.accounts.reports": "Reports",
+        "admin.accounts.reports.viewTasks": "Tasks",
+        "admin.accounts.reports.tasks": "Tasks",
+        "user.myReports": "My reports"
     },
     "ukr": {
         "header.home": "Головна",
@@ -51,6 +56,11 @@
         "admin.createTask.title": "Заголовок",
         "admin.createTask.description": "Опис",
         "user.work": "Ви працюєте. Добре!",
-        "user.notWork": "Ви знаходитесь не на робочому месте!"
+        "user.notWork": "Ви знаходитесь не на робочому місці!",
+        "admin.accounts.viewReports": "Звіти",
+        "admin.accounts.reports": "Звіти",
+        "admin.accounts.reports.viewTasks": "Завдання",
+        "admin.accounts.reports.tasks": "Завдання",
+        "user.myReports": "Мої звіти"
     }
 }

@@ -12,6 +12,8 @@ import { getTasks, assignTask } from '../../redux/actions/task-actions';
 import InfiniteScroll from 'react-infinite-scroller'
 import { TaskDTO } from '../../types/DTO-types';
 import './TaskAssigning.css';
+import { Link } from 'react-router-dom';
+import { Tag } from 'antd';
 
 class UsersList extends React.PureComponent<UsersListProps, any>{
     state = {
@@ -86,14 +88,20 @@ class UsersList extends React.PureComponent<UsersListProps, any>{
                     renderItem={(item: UserDTO, i: number) => (
                         <List.Item
                             actions={[
-                                <Button key="i"
-                                    onClick={() => { this.onAssign(item.id) }}
-                                >
+                                <Button key="1+i"
+                                    onClick={() => { this.onAssign(item.id) }}>
                                     <FormattedMessage id="admin.accounts.assignTask" defaultMessage="Error!" />
-                                </Button>]}
+                                </Button>,
+                                <Button key="2+i">
+                                    <Link to={`/accounts/reports/${item.id}`}><FormattedMessage id="admin.accounts.viewReports" defaultMessage="Error!" /></Link>
+                                </Button>
+                            ]}
                         >
                             <List.Item.Meta
-                                title={<Text strong>{`${i + 1} - ${item.name}`}</Text>}
+                                title={<>
+                                    <Text strong>{`${i + 1} - ${item.name} `}</Text>
+                                    {(item.isWork) ? (<Tag color="success">In Work</Tag>) : (<Tag color="warning">Out of Work</Tag>)}
+                                </>}
                                 description={<div>
                                     <p>{`Email: ${item.userName}`}</p>
                                 </div>}

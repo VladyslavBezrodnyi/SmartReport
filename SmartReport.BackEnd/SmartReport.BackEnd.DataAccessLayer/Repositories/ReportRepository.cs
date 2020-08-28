@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore.Internal;
+﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using SmartReport.BackEnd.CrossCuttingConcern.DTOs;
 using SmartReport.BackEnd.CrossCuttingConcern.Entities;
 using SmartReport.BackEnd.CrossCuttingConcern.Mappers;
@@ -51,7 +52,16 @@ namespace SmartReport.BackEnd.DataAccessLayer.Repositories
                 }
             }
             await _context.SaveChangesAsync();
+        }
 
+        public async System.Threading.Tasks.Task<ICollection<ReportDTO>> GetByUserId(string userId)
+        {
+            return await _context.Reports
+                .Include(r => r.TaskReports)
+                .ThenInclude(tr => tr.Task)
+                .Where(r => r.UserId == userId)
+                .Select(r => r.ToReportDTO())
+                .ToListAsync();
         }
     }
 }

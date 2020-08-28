@@ -9,5 +9,6 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Interfaces
     public interface IReportService
     {
         Task Create(ReportDTO reportDTO, string userId);
+        System.Threading.Tasks.Task<ICollection<ReportDTO>> GetByUserId(string userId);
     }
 }

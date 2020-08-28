@@ -1,0 +1,41 @@
+{
+  "version": 2,
+  "dgSpecHash": "HeDfYbvqTcMlgQ8twe+166aSLIzCPTkdMcHzhCeZ0muyxV+Tih38pMQ6TgzpsQkiSC1a2NAsdtmrc29n6/G/JQ==",
+  "success": true,
+  "projectFilePath": "R:\\smart-report\\mobile\\SmartReport\\SmartReport\\SmartReport\\SmartReport.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lenovo\\.nuget\\packages\\microsoft.netcore.platforms\\1.1.0\\microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\netstandard.library\\2.0.3\\netstandard.library.2.0.3.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\skiasharp\\2.80.1\\skiasharp.2.80.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\skiasharp.extended\\1.60.0\\skiasharp.extended.1.60.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\skiasharp.svg\\1.60.0\\skiasharp.svg.1.60.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\skiasharp.views\\2.80.1\\skiasharp.views.2.80.1.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.licensing\\18.2.0.55\\syncfusion.licensing.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.buttons\\18.2.0.55\\syncfusion.xamarin.buttons.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.core\\18.2.0.55\\syncfusion.xamarin.core.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.datasource\\18.2.0.55\\syncfusion.xamarin.datasource.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.gridcommon\\18.2.0.55\\syncfusion.xamarin.gridcommon.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.sfcombobox\\18.2.0.55\\syncfusion.xamarin.sfcombobox.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.sflistview\\18.2.0.55\\syncfusion.xamarin.sflistview.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\syncfusion.xamarin.sftabview\\18.2.0.55\\syncfusion.xamarin.sftabview.18.2.0.55.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\xamarin.essentials\\1.5.3.2\\xamarin.essentials.1.5.3.2.nupkg.sha512",
+    "C:\\Users\\Lenovo\\.nuget\\packages\\xamarin.forms\\4.8.0.1269\\xamarin.forms.4.8.0.1269.nupkg.sha512"
+  ],
+  "logs": [
+    {
+      "code": "NU1701",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Package 'SkiaSharp.Views 2.80.1' was restored using '.NETFramework,Version=v4.6.1, .NETFramework,Version=v4.6.2, .NETFramework,Version=v4.7, .NETFramework,Version=v4.7.1, .NETFramework,Version=v4.7.2, .NETFramework,Version=v4.8' instead of the project target framework '.NETStandard,Version=v2.0'. This package may not be fully compatible with your project.",
+      "libraryId": "SkiaSharp.Views",
+      "targetGraphs": [
+        ".NETStandard,Version=v2.0"
+      ]
+    }
+  ]
+}

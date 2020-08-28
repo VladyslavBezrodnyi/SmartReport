@@ -1,1 +1,2 @@
 export const CREATE_REPORT = 'CREATE_REPORT';
+export const GET_REPORT_BY_USER_ID = 'GET_REPORT_BY_USER_ID';

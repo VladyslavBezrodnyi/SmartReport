@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SmartReport.Views.AboutUs.AboutUsSimplePage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:viewModel="clr-namespace:SmartReport.ViewModels.AboutUs"
+    xmlns:local1="clr-namespace:SmartReport;assembly=SmartReport" 
+    Title="About"
+    BackgroundColor="{DynamicResource Gray-White}"
+    NavigationPage.HasNavigationBar="False">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <Grid ColumnSpacing="0" RowSpacing="0">
+            <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+                <StackLayout
+                    HorizontalOptions="Center"
+                    Spacing="0"
+                    VerticalOptions="Center">
+
+                    <StackLayout.BindingContext>
+                        <viewModel:AboutUsViewModel />
+                    </StackLayout.BindingContext>
+                    
+                    <Label
+                        FontFamily="{StaticResource Montserrat-SemiBold}"
+                        HorizontalOptions="CenterAndExpand"
+                        Style="{StaticResource HeaderLabelStyle}"
+                        Text="{local1:Translate Loading}">
+                        <Label.Margin>
+                            <OnIdiom
+                                x:TypeArguments="Thickness"
+                                Default="0, 32, 0, 8"
+                                Phone="0, 16, 0, 16" />
+                        </Label.Margin>
+                    </Label>
+                </StackLayout>
+            </ScrollView>
+        </Grid>
+    </ContentPage.Content>
+</ContentPage>

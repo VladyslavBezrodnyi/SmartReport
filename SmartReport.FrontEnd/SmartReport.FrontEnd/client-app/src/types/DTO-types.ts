@@ -11,14 +11,15 @@ export interface RegistrationDTO {
 
 export interface UserDTO {
     id: string;
-    userName:string;
+    userName: string;
     name: string;
     position: string;
+    isWork: boolean;
 }
 
 export interface TaskDTO {
     id?: number;
-    name?:string;
+    name?: string;
     description?: string;
     startDate?: Date;
     deadLine?: Date
@@ -27,23 +28,24 @@ export interface TaskDTO {
 
 export interface PlaceDTO {
     id?: number;
-    Name?:string;
+    Name?: string;
     Description?: string;
 }
 
 export interface UserTaskDTO {
     taskId: number;
-    userId:string;
+    userId: string;
 }
 
 export interface ReportDTO {
     id?: number;
-    reportText:string;
+    reportText: string;
     date: Date;
     tasks: TaskDTO[];
 }
 
 export interface VisitDateDTO {
+    userId: string;
     isWork: boolean;
     workTime: any;
 }

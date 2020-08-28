@@ -1,0 +1,6 @@
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.Domain\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.Domain.deps.json
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.Domain\bin\Debug\netcoreapp3.1\SmartReport.BackEnd.Domain.dll
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.Domain\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.Domain.csprojAssemblyReference.cache
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.Domain\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.Domain.AssemblyInfoInputs.cache
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.Domain\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.Domain.AssemblyInfo.cs
+R:\smart-report\SmartReport\SmartReport.BackEnd\SmartReport.BackEnd.Domain\obj\Debug\netcoreapp3.1\SmartReport.BackEnd.Domain.csproj.CoreCompileInputs.cache

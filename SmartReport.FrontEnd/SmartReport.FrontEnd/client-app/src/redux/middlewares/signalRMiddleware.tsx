@@ -6,7 +6,7 @@ import { HubConnection } from '@microsoft/signalr';
 import { LOGIN_SUCCESS, LOGOUT_SUCCESS } from "../../constants/auth-constants";
 import { message } from "antd";
 import { VisitDateDTO } from "../../types/DTO-types";
-import { RECIEVE_WEBSOCKET_MESSAGE } from '../../constants/socket-constants'
+import { RECIEVE_WEBSOCKET_MESSAGE, RECIEVE_WEBSOCKET_ADMIN_MESSAGE } from '../../constants/socket-constants'
 import axios from "axios";
 import { environment } from "../../environment/environment";
 
@@ -18,6 +18,16 @@ const startSignalRConnection = async (connection: HubConnection, store: any) => 
       // openNotification((message.isWork) ? ("Hi!") : ("Goodbye!"));
       store.dispatch({
         type: RECIEVE_WEBSOCKET_MESSAGE,
+        payload: {
+          message
+        }
+      });
+    });
+
+    connection.on('AdminMonitor', (message: VisitDateDTO) => {
+      console.log(message);
+      store.dispatch({
+        type: RECIEVE_WEBSOCKET_ADMIN_MESSAGE,
         payload: {
           message
         }

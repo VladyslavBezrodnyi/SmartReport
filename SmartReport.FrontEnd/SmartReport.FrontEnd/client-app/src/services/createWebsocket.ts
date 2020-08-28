@@ -12,7 +12,8 @@ const createWebsocket = (url: string, access_token: string): HubConnection => {
 
     const options = {
         transport,
-        logMessageContent: true,
+        //skipNegotiation: true,
+        //logMessageContent: true,
         logger: LogLevel.Trace,
         accessTokenFactory: () => access_token
     };

@@ -1,5 +1,5 @@
 import { AppUser } from "./common-types";
-import { UserDTO, TaskDTO, VisitDateDTO } from "./DTO-types";
+import { UserDTO, TaskDTO, VisitDateDTO, ReportDTO } from "./DTO-types";
 
 export interface AuthState {
     isAuthenticated: boolean;
@@ -17,5 +17,5 @@ export interface TaskState {
 }
 
 export interface ReportState {
-    userTasksList: TaskDTO[],
+    userReportsList: ReportDTO[]
 }

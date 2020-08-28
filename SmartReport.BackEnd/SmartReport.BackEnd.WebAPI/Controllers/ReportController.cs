@@ -23,6 +23,14 @@ namespace SmartReport.BackEnd.WebAPI.Controllers
             _currentUser = currentUser;
         }
 
+
+        [HttpGet]
+        [Route("GetByUserId/{userId}")]
+        public async System.Threading.Tasks.Task<ICollection<ReportDTO>> GetByUserId(string userId)
+        {
+            return await _reportService.GetByUserId(userId);
+        }
+
         [HttpPut]
         [Route("create")]
         public async Task Create([FromBody] ReportDTO reportDTO)

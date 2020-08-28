@@ -1,0 +1,33 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30011.22
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartReport.Android", "SmartReport\SmartReport.Android\SmartReport.Android.csproj", "{9ED35804-41AC-4F58-9902-EE0D2A7944E0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SmartReport", "SmartReport\SmartReport\SmartReport.csproj", "{9460DFE7-AD48-44D7-907B-D6B99FDB72E6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9ED35804-41AC-4F58-9902-EE0D2A7944E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9ED35804-41AC-4F58-9902-EE0D2A7944E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9ED35804-41AC-4F58-9902-EE0D2A7944E0}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{9ED35804-41AC-4F58-9902-EE0D2A7944E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9ED35804-41AC-4F58-9902-EE0D2A7944E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9ED35804-41AC-4F58-9902-EE0D2A7944E0}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{9460DFE7-AD48-44D7-907B-D6B99FDB72E6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9460DFE7-AD48-44D7-907B-D6B99FDB72E6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9460DFE7-AD48-44D7-907B-D6B99FDB72E6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9460DFE7-AD48-44D7-907B-D6B99FDB72E6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0C9D3D31-C79C-4FF9-A78D-91A987B74F01}
+	EndGlobalSection
+EndGlobal

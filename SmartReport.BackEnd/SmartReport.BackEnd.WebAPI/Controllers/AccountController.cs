@@ -31,6 +31,7 @@ namespace SmartReport.BackEnd.WebAPI.Controllers
         {
             VisitDateDTO visitDateDTO = new VisitDateDTO
             {
+                UserId = userId,
                 IsWork = await _accountService.SetVisitDate(userId)
             };
             if(visitDateDTO.IsWork == false)
@@ -38,6 +39,7 @@ namespace SmartReport.BackEnd.WebAPI.Controllers
                 //visitDateDTO.WorkTime = (await _accountService.GetVisitDateStateNow(userId, DateTimeOffset.UtcNow)).WorkTime;
             }
             await NotificationHub.NotifyClientAsync(userId, visitDateDTO);
+            await NotificationHub.AdminMonitorAsync(visitDateDTO);
         }
 
         [HttpGet]

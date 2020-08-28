@@ -7,7 +7,7 @@ namespace SmartReport.Emulator
     {
         static readonly HttpClient client = new HttpClient();
         static readonly string url = "https://smart-report-backend.azurewebsites.net/api/Account/visit/";
-
+        //static readonly string url = "https://localhost:2000/api/Account/visit/";
         static void Main(string[] args)
         {
             Run().Wait();

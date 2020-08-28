@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="SmartReport.Views.Transaction.PaymentSuccessPage"
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:button="clr-namespace:Syncfusion.XForms.Buttons;assembly=Syncfusion.Buttons.XForms"
+    xmlns:viewModel="clr-namespace:SmartReport.ViewModels.Transaction"
+    xmlns:svg="clr-namespace:SmartReport.Controls"
+    Title="Payment Success Page"
+    BackgroundColor="{DynamicResource Gray-100}"
+    NavigationPage.HasNavigationBar="False">
+
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+
+        <ScrollView HorizontalOptions="Center" VerticalOptions="Center">
+            <StackLayout
+                HorizontalOptions="Center"
+                Spacing="0"
+                VerticalOptions="Center">
+
+                <StackLayout.BindingContext>
+                    <viewModel:PaymentViewModel />
+                </StackLayout.BindingContext>
+
+                <!--  Payment status label  -->
+                <Label
+                    Margin="0,40,0,0"
+                    Style="{StaticResource LabelStyle}"
+                    Text="Ви успішно створили звіт!" />
+
+                <button:SfButton
+                    Command="{Binding BackCommand}"
+                    Text="Створити ще"></button:SfButton>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+</ContentPage>

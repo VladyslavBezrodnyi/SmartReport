@@ -28,7 +28,7 @@ namespace SmartReport.BackEnd.DataAccessLayer.Repositories
                 UserId = userId,
                 Date = DateTimeOffset.UtcNow
             };
-            context.VisitDates.Add(vd);
+            //context.VisitDates.Add(vd);
             await context.SaveChangesAsync();
             return user.IsWork;
         }

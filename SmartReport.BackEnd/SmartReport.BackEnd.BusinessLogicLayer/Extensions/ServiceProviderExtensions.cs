@@ -68,21 +68,38 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Extensions
                     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
                     options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
                 })
-                .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, jwtBearerOptions => {
+                .AddJwtBearer(JwtBearerDefaults.AuthenticationScheme, 
+                jwtBearerOptions => 
+                {
                     jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters
                     {
                         ValidateIssuerSigningKey = true,
                         IssuerSigningKey = authConfiguration.KEY,
 
-                        ValidateIssuer = true,
-                        ValidIssuer = authConfiguration.ISSUER,
+                        ValidateIssuer = false,
+                        //ValidIssuer = authConfiguration.ISSUER,
 
-                        ValidateAudience = true,
-                        ValidAudience = authConfiguration.AUDIENCE,
+                        ValidateAudience = false,
+                        //ValidAudience = authConfiguration.AUDIENCE,
 
-                        ValidateLifetime = true,
+                        ValidateLifetime = false,
 
-                        ClockSkew = TimeSpan.Zero
+                        //ClockSkew = TimeSpan.Zero
+                    };
+                    jwtBearerOptions.Events = new JwtBearerEvents
+                    {
+                        OnMessageReceived = context =>
+                        {
+                            var accessToken = context.Request.Query["access_token"];
+
+                            var path = context.HttpContext.Request.Path;
+                            if (!string.IsNullOrEmpty(accessToken) &&
+                                (path.StartsWithSegments("/notification")))
+                            {
+                                context.Token = accessToken;
+                            }
+                            return System.Threading.Tasks.Task.CompletedTask;
+                        }
                     };
                 });
         }

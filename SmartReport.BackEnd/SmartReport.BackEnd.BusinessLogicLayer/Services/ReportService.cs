@@ -20,5 +20,9 @@ namespace SmartReport.BackEnd.BusinessLogicLayer.Services
         {
             await _db.Reports.Create(reportDTO, userId);
         }
+        public async System.Threading.Tasks.Task<ICollection<ReportDTO>> GetByUserId(string userId)
+        {
+            return await _db.Reports.GetByUserId(userId);
+        }
     }
 }
